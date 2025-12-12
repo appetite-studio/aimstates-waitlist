@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { PiArrowLeft } from "react-icons/pi";
 import Markdown from "react-markdown";
+import rehypeSlug from "rehype-slug";
 
 export default function whitepaperPage() {
   return (
@@ -8,345 +9,300 @@ export default function whitepaperPage() {
       <Link className="btn btn-ghost mb-8" href="/">
         <PiArrowLeft /> Go back to home
       </Link>
-      <Markdown>
+      <Markdown rehypePlugins={[rehypeSlug]}>
         {`
-# aim states Whitepaper: AI Governance for the Web3 Era
+### "Build a nation. No land required."
+# AIM States - Whitepaper
 
-## Executive Summary
+## Table of Contents
 
-aim states introduces a revolutionary platform that enables the creation and operation of AI-managed Decentralized Autonomous Organizations (DAOs) governed by predefined constitutions. By integrating advanced artificial intelligence with blockchain technology, aim states addresses the critical challenges facing traditional DAOs: governance inefficiency, participation fatigue, and inconsistent decision-making. The platform empowers communities to codify their values and operational principles into constitutional frameworks that guide autonomous, transparent, and consistent governance at unprecedented speed and scale - potentially transforming not just organizational governance but reimagining judicial systems and even aspects of nation-state functionality.
+1. [Intro: The World Updated, Nations Didn't](#1-intro-the-world-updated-nations-didnt)
+2. [So What Is AIM States?](#2-so-what-is-aim-states)
+3. [Network States: Our Definition](#3-network-states-our-definition)
+4. [How an AIM State Works](#4-how-an-aim-state-works)
+5. [Why This Actually Matters](#5-why-this-actually-matters)
+6. [Safety + Transparency (Non-negotiable)](#6-safety--transparency-non-negotiable)
+7. [The Tech Stack (Explained Short + Clear)](#7-the-tech-stack-explained-short--clear)
+8. [Who Is This For?](#8-who-is-this-for)
+9. [Roadmap](#9-roadmap)
+10. [Our Philosophy](#10-our-philosophy)
+11. [Closing](#11-closing)
 
-## 1. Introduction: Reimagining Governance
+---
 
-Decentralized Autonomous Organizations have emerged as one of the most promising innovations in organizational governance, yet they face significant operational challenges that limit their effectiveness. aim states creates a new paradigm: constitutional AI governance—a system where artificial intelligence evaluates and decides on proposals according to a community-defined constitutional framework, operating at machine speed while maintaining unwavering fidelity to founding principles.
+## 1. Intro: The World Updated, Nations Didn't
 
-### 1.1 Vision Statement
+The world has changed a lot recently.
 
-aim states envisions a world where human values and principles can be encoded into constitutional frameworks that guide autonomous decision-making systems. These systems enable collective coordination at unprecedented scale and speed while remaining aligned with human values. We believe this technology can transform everything from small community organizations to global governance structures.
+People now live in group chats more than cities.
+Communities form on social media faster than in real neighborhoods.
+Entire cultures are getting displaced by war, climate change, and bad politics.
+Diasporas are larger than the populations back home.
 
-### 1.2 From DAO 1.0 to Constitutional AI Governance
+But the rulebook for being a “state”? Still stuck in 1850.
 
-Traditional DAOs represent the first generation of decentralized governance, characterized by token-based voting and majority rule mechanisms. aim states represents the next evolutionary step—governance guided by principles rather than power, operated at machine speed rather than human timescales, capable of consistently applying complex value frameworks across unlimited decisions.
+**Borders. Land. Flags. Bureaucrats.**
 
-## 2. The Challenge: Limitations of Traditional DAO Governance
+Feels kinda outdated, right?
 
-Current DAO implementations suffer from several critical limitations that aim states is designed to address:
+So we asked some spicy questions:
 
-### 2.1 Participation Fatigue
+- **What if a nation didn’t need land?**
+- **What if it was built from shared values instead?**
+- **And what if AI could help the community actually *stick* to those values?**
 
-As proposal volume increases, member engagement typically decreases, leading to a common pattern of initially high participation that gradually declines. Studies show that mature DAOs often see less than 10% of eligible voters participating in governance decisions. This creates governance by a small active minority and undermines the fundamental premise of decentralization.
+Those questions became AIM States.
 
-### 2.2 Governance Speed
+---
 
-Traditional voting processes impose significant time costs:
+## 2. So What *Is* AIM States?
 
-- Proposal submission periods
-- Discussion windows
-- Voting periods (typically 3-7 days)
-- Timelock delays before implementation
+AIM States is a platform where anyone can launch a N**etwork State** - a digital-first nation. With:
 
-These delays create friction that makes DAOs unresponsive to rapidly changing conditions and opportunities.
+- A constitution written by humans
+- Governance run by a transparent on-chain AI
+- Citizens from anywhere in the world
+- Membership rules you define
+- Zero dependency on physical territory
 
-### 2.3 Inconsistent Decision-Making
+It’s as easy as:
 
-Decisions in traditional DAOs often reflect the particular composition of voters for each proposal rather than consistent organizational values. Two similar proposals may receive completely different outcomes depending on which subset of members chooses to participate in each vote.
+- WordPress → for publishing
+- Shopify → for commerce
+- **AIM States → for network states**
 
-### 2.4 Governance Attacks
+A new layer of society, built on the internet, powered by real values.
 
-Low participation rates create vulnerabilities to various governance attacks:
+---
 
-- Bribery attacks
-- Sybil attacks
-- Last-minute voting swings
-- Proposal flooding
+## 3. Network States: Our Definition
 
-These vulnerabilities undermine trust in the governance process and create existential risks for DAOs.
+Network States are communities organized online around a shared mission.
 
-### 2.5 Technical and Cognitive Barriers
+Balaji made the concept mainstream - we love him for that.
 
-Many governance mechanisms require specialized knowledge of cryptographic systems, voting mechanisms, and proposal formats, limiting inclusive participation and creating governance elites.
+He talks about:
 
-## 3. aim states: Core Architecture
+- Organizing online
+- Building capital
+- Acquiring land
+- Getting recognition/sovereignty
 
-aim states introduces a new paradigm in which an AI agent serves as the constitutional interpreter and executor. This agent evaluates all proposals against a predefined set of principles, values, and rules established by the community.
+AIM States doesn’t replace that vision.
 
-### 3.1 Constitutional Framework
+We just have a slightly different perspective:
 
-The constitutional framework is a formal document that encodes the DAO's:
+**You don’t need land to be a real nation.
+Values + governance + citizens = a network state.**
 
-- Core principles and values
-- Objectives and mission
-- Decision-making criteria
-- Resource allocation priorities
-- Procedural rules and constraints
-- Amendment processes
+Both paths are valid.
 
-Unlike traditional smart contracts that encode rigid rules, the constitutional framework captures higher-order principles and reasoning frameworks that guide interpretation across diverse scenarios.
+We build the infrastructure for *all* of them.
 
-### 3.2 On-chain AI Agent
+---
 
-The heart of aim states is a transparent, auditable AI system that processes proposals and renders decisions based on constitutional alignment. This system:
+## 4. How an AIM State Works
 
-- Operates entirely on-chain
-- Produces deterministic outputs given the same inputs
-- Generates human-readable justifications for all decisions
-- Creates an immutable record of constitutional interpretations
+### A. You write a constitution
 
-### 3.3 Proposal Interface
+Plain language. Real values. Comprehensive.
 
-aim states provides a user-friendly system for members to submit proposals with standardized formats that facilitate AI interpretation. The interface:
+### B. An on-chain AI becomes your “governor”
 
-- Guides proposal creation with templates
-- Ensures all necessary information is included
-- Provides real-time feedback on constitutional alignment
-- Facilitates clarification requests from the AI system
+This AI:
 
-### 3.4 Constitutional Amendment Process
+- Reads every proposal
+- Applies constitutional rules consistently
+- Publishes reasoning
+- Stores decisions on-chain for transparency
+- Can’t be dishonest to the constitution
+- Can’t run vibes-based politics
 
-While day-to-day governance is managed by the AI agent, the constitutional framework itself remains under human control. The amendment process typically involves:
+### C. Citizens (Humans) stay in full control
 
-- Higher thresholds for approval than regular proposals
-- Extended discussion periods
-- Super-majority requirements
-- Implementation delays to allow for community response
+They can:
 
-## 4. Technical Architecture
+- Amend the constitution
+- Override AI decisions
+- Replace the AI model
+- Maybe elect a human co-manager (for a hybrid aproach)
+- Define or change how citizenship works
 
-aim states's architecture combines several technological innovations to create a robust governance system:
+### D. Membership rules are totally customizable
 
-### 4.1 Constitutional Language Framework
+Pick any filter or bring your own:
 
-The platform provides a specialized language for crafting constitutions that balances human readability with machine interpretability. This language enables communities to express:
+- Proof of humanhood
+- Country-restricted
+- Invite-only
+- Open to everyone
 
-- **Value Statements**: Fundamental principles that guide all decisions
-- **Decision Criteria**: Specific factors to consider when evaluating proposals
-- **Resource Allocation Frameworks**: Priorities and constraints for financial decisions
-- **Procedural Rules**: Requirements for valid proposals and governance processes
-- **Domain-Specific Considerations**: Special rules for particular types of decisions
+That’s it.
 
-The framework supports both natural language expressions and more formal logical constructs, allowing communities to create constitutions that are both expressive and precise.
+Simple stack, huge potential. Totally upgradeable.
 
-### 4.2 On-chain AI System
+---
 
-The AI system operates entirely on-chain, ensuring:
+## 5. Why This Actually Matters
 
-#### 4.2.1 Transparency
+### A. Nations that might lose land still get to exist
 
-All inputs, processing steps, and outputs are publicly visible and verifiable. The system never operates as a "black box" but provides complete visibility into its decision-making process.
+Kiribati, Tuvalu, indigenous nations, Palestine - digital continuity matters. They can even rebuild their physical land with the power from the network state.
 
-#### 4.2.2 Determinism
+### B. Communities scattered across the world finally get a home
 
-Given the same inputs (proposal and constitutional framework), the system produces consistent outputs. This ensures predictability and fairness in governance decisions.
+Your identity shouldn’t depend on your zip code.
 
-#### 4.2.3 Auditability
+### C. Mission-based nations become real
 
-Every decision includes a trace of the reasoning process, showing which constitutional elements were considered and how they influenced the final decision.
+Imagine:
 
-#### 4.2.4 Immutability
+- A sustainability-first nation
+- A science-progress nation
+- Spiritual or religious communities with modern governance
+- A nation for builders (👀)
 
-Past decisions cannot be altered retroactively, creating a permanent record of constitutional interpretations that can guide future decisions.
+### D. Cities and countries get digital twins
 
-### 4.3 Technical Implementation
+The “Seoul Network State” or “Digital Kenya” is not sci-fi anymore.
 
-aim states is built on a layered architecture:
+Countries/Cities can decide to have a network version of themselves.
 
-1. **Blockchain Layer**: Provides the underlying trust, consensus, and immutability mechanisms
-2. **Smart Contract Layer**: Implements the core logic for proposal submission, constitutional storage, and decision execution
-3. **AI Execution Layer**: On-chain environment for executing the constitutional AI agent
-4. **Interface Layer**: User-facing applications for interacting with the system
+### E. Governance experiments without breaking a real country
 
-### 4.4 Integration with Existing Web3 Infrastructure
+Try new justice models, budgeting rules, or voting systems safely.
 
-aim states is designed to integrate with:
+---
 
-- Multiple blockchain ecosystems (Ethereum, Solana, etc.)
-- DeFi protocols for treasury management
-- NFT systems for membership and rights management
-- Identity solutions for governance participation
-- Cross-chain bridges for multi-chain operations
+## 6. Safety + Transparency (Non-negotiable)
 
-## 5. Governance Process Flow
+We built this to help humans, not replace them.
 
-The aim states governance process follows a streamlined flow:
+### The AI cannot:
 
-1. **Proposal Submission**: A member submits a proposal through the standard interface
-2. **AI Constitutional Review**: The on-chain AI evaluates the proposal against the constitutional framework
-3. **Decision Rendering**: The AI produces a decision (approve/reject) with justification
-4. **Execution**: Approved proposals are automatically executed on-chain
-5. **Constitutional Record**: The decision and its reasoning are added to the permanent record
+- change the constitution
+- make hidden decisions
+- act outside its authority
+- favor anyone
+- run on vibes
 
-This process occurs at machine speed, potentially reducing governance timeframes from days or weeks to minutes or seconds.
+### The system guarantees:
 
-## 6. Transformative Use Cases
+- Every decision includes proof
+- Humans can override
+- Emergency stop is real
+- Ability to upgrade to fix vulnerabilities
 
-### 6.1 Organizational Governance
+---
 
-#### 6.1.1 Community Treasury Management
+## 7. The Tech Stack (Explained Short + Clear)
 
-aim states can evaluate funding proposals against constitutional priorities, ensuring consistent allocation of resources aligned with community values. Decision speed enables rapid response to emerging opportunities without governance delays.
+### A. Verifiable AI
 
-#### 6.1.2 Protocol Governance
+- Deterministic and verifiable AI to eliminate need for trust
+- Every decisions made according to the constitution
+- Model-upgradeable by citizens
 
-Technical parameter adjustments can be evaluated for alignment with constitutionally defined risk tolerances and optimization goals. The system can respond to changing market conditions at machine speed while maintaining alignment with core principles.
+### B. DAO - Blockchain Layer
 
-#### 6.1.3 Contributor Compensation
+- Immutable transactions
+- Transparent governance
+- Verifiable execution
+- Modular systems for identity, permissions, etc
 
-Reward systems can be consistently administered according to constitutional principles regarding fair compensation, value creation, and incentive alignment.
+### C. Treasury
 
-### 6.2 Judicial Applications
+- Community budgets
+- Automated allocations without corruption
+- Constitution-driven spending rules
 
-#### 6.2.1 Dispute Resolution
+### D. More possibilities to explore
 
-aim states can form the basis of decentralized justice systems that resolve disputes according to constitutional principles with consistent application across all cases.
+- Better judicial systems, marriage registries.. etc
+- State run organizations and jobs
+- Anything a nation state can do
 
-#### 6.2.2 Content Moderation
+Boom. A state, but digital.
 
-Digital communities can establish constitutional principles for acceptable content, which the AI applies consistently across moderation decisions without human bias or inconsistency.
+---
 
-#### 6.2.3 Rules Enforcement
+## 8. Who Is This For?
 
-Game theory optimal enforcement of community rules based on constitutional principles rather than arbitrary human judgment.
+### New value-based nations
 
-### 6.3 Public Infrastructure
+Because “country = geography” is outdated AF.
 
-#### 6.3.1 Public Goods Funding
+### Cultures under attack
 
-Constitutional frameworks can encode principles for identifying and supporting public goods, enabling automated allocation of resources to projects that create broad community value.
+Preserve identity + governance digitally.
 
-#### 6.3.2 Service Provision
+### Builders + governance nerds
 
-AI-managed DAOs can operate public services according to constitutional service standards, ensuring consistent delivery aligned with community needs.
+Test new political models without hurting anyone.
 
-### 6.4 Nation-State Functions
+### Cities + governments
 
-#### 6.4.1 Regulatory Compliance
+Create digital governance extensions.
 
-Constitutional AI can evaluate activities against regulatory frameworks, providing consistent interpretation and application of rules across all participants.
+---
 
-#### 6.4.2 Benefit Distribution
+## 9. Roadmap
 
-Social support systems can be administered according to constitutional principles of need, fairness, and effectiveness without bureaucratic delays or inconsistencies.
+### Phase 1 — Proof of concept
 
-#### 6.4.3 Network States
+- Build a working platform with governance AI
+- Test out citizenship systems
+- Launch for public use
 
-aim states provides the technological foundation for network states—digital-first governance systems that operate according to constitutional principles accepted by their citizens regardless of physical location.
+### Phase 2 — Adoption
 
-## 7. Ethical Considerations and Safeguards
+- Run Pop-up cities and explore more ideas
+- Bring in all different states
+- Make it easy for anyone to explore and join states
 
-aim states acknowledges several important ethical considerations in its design:
+### Phase 3 — Transformation
 
-### 7.1 Constitutional Sovereignty
+- Let countries or cities transform to network states
+- Prepare features for a total state governance
+- Train citizen participation
 
-The constitutional framework remains under human control, with the AI serving as interpreter rather than author. Humans define the principles and values; the AI applies them consistently.
+---
 
-### 7.2 Transparency Requirements
+## 10. Our Philosophy
 
-All constitutional frameworks must be publicly accessible and written in clear language. Hidden or obfuscated constitutional elements are prohibited by the protocol.
+Our vibe is simple:
 
-### 7.3 Human Amendment Process
+**Governance should be principled, transparent, and accessible. Even if you’re a tiny community with no land.**
 
-Constitutional amendments require human consensus through traditional governance mechanisms. The AI cannot modify its own governing framework.
+AIM States is our attempt to give people something the real world often refuses:
 
-### 7.4 Appeal Mechanisms
+**A home you can’t lose. A nation built on values.
+A system that actually does what it says.**
 
-aim states supports optional human appeal processes for exceptional circumstances. Communities can implement escalation paths for decisions that require additional consideration.
+---
 
-### 7.5 Ethical Red Lines
+## 11. Closing
 
-The platform prohibits constitutional frameworks that:
+If you’ve ever wished your community had a real place in the world
 
-- Explicitly promote harm to individuals or groups
-- Enable illegal activities
-- Violate fundamental human rights
-- Operate without transparent governance
+or wished your *country* followed its values consistently
 
-## 8. Justice as a Foundational Principle
+or wanted to try building society 2.0…
 
-A core premise of aim states is that the AI system can only act in accordance with justice as defined in the constitutional framework. This creates several powerful advantages:
+Welcome.
 
-### 8.1 Consistent Application
+This is for you.
 
-Unlike human systems prone to bias, favoritism, or inconsistency, the AI applies constitutional principles uniformly across all decisions regardless of the parties involved.
+**Let’s build network states that matter.
+Let’s build nations that actually follow their values.
+Let’s build futures that don’t depend on borders.**
 
-### 8.2 Immunity to Corruption
+Let's go.
 
-The AI system cannot be bribed, threatened, or otherwise influenced to deviate from its constitutional obligations.
+---
 
-### 8.3 Perfect Memory
-
-The system maintains a complete record of all past interpretations, ensuring consistency over time and enabling evolution of constitutional understanding through accumulated precedent.
-
-### 8.4 Impartiality
-
-The AI evaluates proposals purely on their constitutional merits, without regard to the social status, identity, or relationships of the proposers.
-
-## 9. Theoretical Foundations
-
-aim states builds upon several theoretical traditions:
-
-### 9.1 Constitutional Theory
-
-Drawing from legal constitutionalism, the platform implements the notion that governance should be bound by fundamental principles rather than momentary majorities.
-
-### 9.2 Mechanism Design
-
-The system applies mechanism design principles to create governance structures that align individual incentives with collective welfare.
-
-### 9.3 AI Alignment
-
-aim states represents a practical implementation of AI alignment techniques, ensuring that autonomous systems operate according to human values and intentions.
-
-### 9.4 Deliberative Democracy
-
-The constitutional creation process draws on deliberative democratic principles, emphasizing reasoned collective decision-making about fundamental values.
-
-## 10. Economic Model
-
-aim states operates on a sustainable economic model:
-
-### 10.1 Platform Utility Token
-
-A native utility token (AIMD) provides:
-
-- Access to the constitutional AI system
-- Governance rights over the platform itself
-- Staking for advanced features
-- Fee payment for platform services
-
-### 10.2 Service Fees
-
-Organizations using aim states pay fees based on:
-
-- Complexity of constitutional framework
-- Volume of proposals processed
-- Computational resources required
-- Additional services utilized
-
-### 10.3 Value Capture
-
-A portion of fees flows to:
-
-- Protocol development
-- Security audits and bug bounties
-- Constitutional research
-- Ecosystem growth
-
-## 11. Conclusion and Vision
-
-aim states represents a significant evolution in decentralized governance, addressing the critical limitations of traditional DAO structures while preserving the core values of decentralization, transparency, and community sovereignty. By enabling AI-managed constitutional governance, the platform offers a path toward more consistent, principled, and scalable decentralized organizations.
-
-The marriage of artificial intelligence and blockchain technology in service of community-defined values opens new possibilities not just for organizational governance but potentially for rethinking fundamental aspects of social coordination. As we navigate the complex challenges of the 21st century, aim states provides a framework that aligns technological capabilities with human values and aspirations.
-
-We invite communities, developers, governance researchers, and visionaries to join us in building this new paradigm of constitutional AI governance—a system that can scale from small community organizations to potentially transformative global coordination mechanisms.
-
-## Contact
-
-For more information about aim states
-
-- Website: [aim states.xyz](https://aim states.xyz)
-- Twitter: [@appetite_studio](https://x.com/appetite_studio)
-
-            `}
+aimstates.com
+        `}
       </Markdown>
     </div>
   );

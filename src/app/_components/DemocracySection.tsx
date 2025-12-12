@@ -37,6 +37,9 @@ export default function DemocracySection() {
             Build States based on Ideals, Values and Belief.{" "}
             <span className="opacity-40">Not Territory.</span>
           </p>
+          <a href="/whitepaper" className="btn btn-primary flex w-fit p-0 gap-1">
+            Read Whitepaper
+          </a>
           <a href="https://x.com/AimStates" target="_blank" className="btn btn-primary flex w-fit p-0 gap-1">
             Get notified on launch <FaXTwitter />
           </a>
