@@ -57,7 +57,7 @@ Those questions became AIM States.
 
 ## 2. So What *Is* AIM States?
 
-AIM States is a platform where anyone can launch a N**etwork State** - a digital-first nation. With:
+AIM States is a platform where anyone can launch a **Network State** - a digital-first nation. With:
 
 - A constitution written by humans
 - Governance run by a transparent on-chain AI
