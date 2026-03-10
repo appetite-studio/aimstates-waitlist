@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaXTwitter, FaFileLines } from "react-icons/fa6";
 
 export default function DemocracySection() {
   return (
@@ -38,7 +38,7 @@ export default function DemocracySection() {
             <span className="opacity-40">Not Territory.</span>
           </p>
           <a href="/whitepaper" className="btn btn-primary flex w-fit p-0 gap-1">
-            Read Whitepaper
+            Read Whitepaper <FaFileLines />
           </a>
           <a href="https://x.com/AimStates" target="_blank" className="btn btn-primary flex w-fit p-0 gap-1">
             Get notified on launch <FaXTwitter />
